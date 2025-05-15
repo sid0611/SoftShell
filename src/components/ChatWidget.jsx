@@ -29,6 +29,10 @@ const getAnswer = (msg) => {
 };
 
 export default function ChatWidget() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  if (!isOpen) return null;
+
   return (
     <div className="fixed bottom-4 right-4 w-80 h-96 flex flex-col bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg">
       <header className="bg-blue-600 dark:bg-blue-700 text-white p-4 rounded-t-lg flex justify-between items-center">
@@ -36,10 +40,9 @@ export default function ChatWidget() {
         <button
           aria-label="Close chat"
           className="text-white hover:text-gray-200"
-          onClick={() => {
-          }}
+          onClick={() => setIsOpen(false)}
         >
-          ×
+          Close
         </button>
       </header>
 
