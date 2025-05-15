@@ -39,7 +39,7 @@ export default function ChatWidget() {
         <h3 className="font-semibold">Chat with us</h3>
         <button
           aria-label="Close chat"
-          className="text-white hover:text-gray-200"
+          className="text-white hover:text-gray-200 cursor-pointer"
           onClick={() => setIsOpen(false)}
         >
           Close
